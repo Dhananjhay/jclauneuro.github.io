@@ -1,0 +1,10 @@
+---
+title: "Publications"
+format:
+  html:
+    page-layout: full
+---
+
+## 2022
+* Testing et al.
+

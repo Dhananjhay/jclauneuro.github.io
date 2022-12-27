@@ -1,0 +1,46 @@
+---
+format:
+  html:
+    page-layout: full
+---
+
+
+:::: {.grid}
+
+::: {.g-col-4}
+![](images/jclau-github-avatar.png){.roundedimg .absolute height=20%}
+
+<div class='centered'>
+
+Assistant Professor of Neurosurgery
+
+Western University, London, Ontario, Canada
+
+[Google Scholar](https://scholar.google.com/citations?user=69lqJ4AAAAAJ&hl)
+
+[Lab website](Coming Soon)
+
+<a rel="me" href="https://mstdn.ca/@jclauneuro">Mastodon</a>
+
+<a rel="me" href="https://twitter.com/@jclauneuro">Twitter</a>
+
+</div>
+
+:::
+
+::: {.g-col-8}
+## About me
+
+I'm a neurosurgeon and researcher using brain imaging to improve the diagnosis and treatment options for patients suffering from neurological disorders.
+
+I received my Bachelor's degree in Computer Science from the University of Waterloo, my MD degree at Queen's University, and completed my neurosurgical training and PhD from Western University.  After completing a fellowship in Functional and Epilepsy Surgery at Emory University, I returned to Western University as an Assistant Professor of Neurosurgery.
+
+Lab website coming soon [here](https://www.jclauneuro.ca).
+
+I am also an Associate Scientist of the Robarts Research Institute, and Associate Member of the School for Biomedical Engineering and Graduate Program in Neuroscience at Western University. 
+
+I was inspired by the aesthetics and simplicity of the [Poldrack website](https://poldrack.github.io) and have borrowed from it here for this initial website implementation. I am similarly working on updating an [online lab manual](https://poldracklab.github.io) that outlines our polices and standard operating procedures, as well as my mentoring philosophy.
+
+:::
+
+::::

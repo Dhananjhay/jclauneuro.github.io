@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "jclauneuro"
+ 
+  navbar:
+    left:
+      - text: "About"
+        href: https://www.schulich.uwo.ca/cns/people/faculty/neurosurgeons/bio-lau.html
+      - icon: github
+        href: https://github.com/jclauneuro
+      - icon: mastodon
+        href: https://mstdn.ca/@jclauneuro
+    right:
+      - text: "Projects"
+        href: projects.html
+      - text: "Publications"
+        href: publications.html
+      - text: "Talks"
+        href: talks.html
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
