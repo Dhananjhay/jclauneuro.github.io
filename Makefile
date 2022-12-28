@@ -5,4 +5,4 @@ render-site:
 	-git add -u
 	-git add docs/*
 	-git commit -m "updating docs"
-	git push origin main
+	git push origin master
