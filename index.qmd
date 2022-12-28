@@ -8,7 +8,7 @@ format:
 :::: {.grid}
 
 ::: {.g-col-4}
-![](images/jclau-github-avatar.png){.roundedimg .absolute height=20%}
+![](images/jclau-github-avatar.png){.roundedimg .absolute height=5%}
 
 <div class='centered'>
 
