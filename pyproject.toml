@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "khanlab.github.io"
+name = "jclauneuro.github.io "
 version = "1.0.0"
 description = "Khan Computational Imaging Lab website"
 authors = ["Your Name <you@example.com>"]
