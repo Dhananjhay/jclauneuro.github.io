@@ -1,0 +1,61 @@
+name: Update publications
+
+on:
+  schedule:
+    # 05:00 UTC on first day of every month
+    - cron: "0 5 1 * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup environment
+        uses: khanlab/actions/.github/actions/action-setup_task-installPyProject@v0.3.6
+        with:
+          python-version: "3.10"
+
+      - name: Checkout master branch
+        uses: actions/checkout@v4
+
+      - name: Run notebook
+        run: |
+          poetry run ipython kernel install --name "khanlab.github.io" --user
+          poetry run papermill ${{ github.workspace }}/get_publications.ipynb ${{ github.workspace }}/get_publications.ipynb
+
+      - name: New article condition
+        id: article-condition
+        run: |
+          if grep -q "0 new articles found." ${{ github.workspace }}/get_publications.ipynb; then
+            echo "hit=false" >> $GITHUB_OUTPUT 
+          else
+            echo "hit=true" >> $GITHUB_OUTPUT
+          fi
+
+      # Creates a PR for review if new article(s) found
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        if: steps.article-condition.outputs.hit == 'true'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update publications by Actions bot
+          title: "[MAINT] Update publications spreadsheet"
+          body: "New publications found - please check before merging: https://github.com/khanlab/khanlab.github.io/blob/update_publications/get_publications.ipynb"
+          base: master
+          branch: update_publications
+
+      # Directly commits to master if no new articles found
+      - name: Commit publications file
+        id: commit-pub
+        if: steps.article-condition.outputs.hit != 'true'
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Update publications spreadsheet" -a
+
+      # Look to replace this with a versioned github-push action
+      - name: Push to master
+        uses: ad-m/github-push-action@v0.8.0
+        if: steps.article-condition.outputs.hit != 'true'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

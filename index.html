@@ -1,0 +1,61 @@
+---
+layout: base
+permalink: /
+title: "HOME |"
+style: /assets/css/index.css
+---
+
+<!-- Grab associated files -->
+{% assign funding = site.data.index.funding %}
+
+<div class="row">
+  <div class="text-center">
+    <img id="lab-photo" src="/assets/images/index/IMG_9727.jpg" alt="Khanlab" />
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <h2>About</h2>
+  <hr />
+  <p>
+    Medical images play a critical role in the diagnosis and monitoring of
+    disease, and the planning and guidance of surgical therapies. Our group
+    develops and applies sophisticated image processing and analysis techniques
+    to extract, quantify, and distill information from medical images,
+    ultimately leading to more accurate diagnoses and more precise surgical
+    interventions.
+  </p>
+</div>
+<br />
+
+<div class="row">
+  <h2>Research</h2>
+  <hr />
+  {% include index/research.html %}
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-sm-6">
+    <h2>News</h2>
+    <hr />
+    {% include index/news.html %}
+  </div>
+
+  <div class="col-lg-6 col-sm-6">
+    <h2><a href="/pubs/"> Publications</a></h2>
+    <hr />
+    {% include index/publications.html %}
+  </div>
+</div>
+<br />
+
+<div class="row">
+  <h2>Funding</h2>
+  <hr />
+  <div class="row justify-content-center">
+    {% for source in funding %}
+    <img class="funding" alt="{{ source.name }}" src="{{ source.image }}" />
+    {% endfor %}
+  </div>
+</div>

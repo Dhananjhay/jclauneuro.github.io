@@ -1,0 +1,19 @@
+# research: 
+#   - name: Image-guided neurosurgery
+#     main_image: https://static.wixstatic.com/media/e4137e_6cd6c4eb8dbd49bcaa4d1485727c26c2.png/v1/fill/w_487,h_201,al_c,q_85/e4137e_6cd6c4eb8dbd49bcaa4d1485727c26c2.webp
+#     long_desc: "<p>Neurosurgery to treat drug-resistant epilepsy or brain cancer 
+#     is very challenging, as the surgeon needs to trade-off completely removing 
+#     the disease, with sparing healthy functional tissue. Planning how much of the 
+#     brain to treat requires knowledge of the neurological pathways and abnormal 
+#     regions, however this can be difficult as the boundaries are not always well 
+#     defined. Incorrectly defining the region to treat can carry a great deal of 
+#     risk; if too small, the surgery will not be effective, and if too large, 
+#     function may be altered negatively. </p>
+
+#     <p> We are working on computational tools to guide neurosurgeons towards 
+#     more optimal resections, biopsies, and electrode implantations by extracting 
+#     and exploiting the information present in medical images. </p>"
+#     popup: 
+#       - name: 
+#         image_link: 
+#         image_description:

@@ -1,1 +1,5 @@
-/.quarto/
+Gemfile.lock
+.jekyll-cache
+_site
+.*venv
+.ipynb_checkpoints
