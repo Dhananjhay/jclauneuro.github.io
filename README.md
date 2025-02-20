@@ -10,7 +10,7 @@ _A Jupyter notebook with a Github Actions cron job is utilized to update
 recent publications on a monthly basis._
 
 The design of the website and use of Jekyll was inspired by 
-[nbclab.github.io](https://github.com/NBCLab/nbclab.github.io).
+[khanlab.github.io](https://github.com/khanlab/khanlab.github.io).
 
 All required packages are managed via 
 [Poetry (v1.2.x)](https://python-poetry.org/). Click on the package link to see 
@@ -25,7 +25,7 @@ please make the necessary changes make a pull request to the repository!
 Netlify has been enabled to preview pages from pull requests. After making a 
 pull request, the Netlify bot will comment (after a short time) with a preview 
 link! This link will look something like: 
-`https://deploy-preview-##--khanlab.github.io.netlify.app/` (where `##` is 
+`https://deploy-preview-##--jclauneuro.github.io.netlify.app/` (where `##` is 
 associated with the pull request number).
 
 To preview these changes on your local machine prior to publishing, follow 
